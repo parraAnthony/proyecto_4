@@ -1,0 +1,126 @@
+:root {
+  --shading:to top right, #000000 0%,#434343 100%;
+}
+body{
+  padding: 0;
+  margin: 0;
+  background-color: #eee;
+}
+#root {
+  display: flex;
+  width: 100%;
+}
+.users__container {
+  margin: 40px;
+}
+.form__container {
+  margin: 40px;
+}
+.form__container h2 {
+  text-align: center;
+  text-shadow: -8px 7px 6px #000000;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  gap: 15px;
+  padding: 30px;
+  position: relative;
+  background-color: white;
+}
+form::after{
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 92%;
+  height: 98%;
+  background-image:linear-gradient( var(--shading));
+  z-index: -1;
+  filter: blur(10px);
+}
+form button {
+  margin-top: 10px;
+  border: none;
+  height: 40px;
+}
+.users__container h1{
+  text-shadow: -8px 7px 6px #000000;
+}
+.container__cards{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+}
+.user__container {
+  position: relative;
+  background-color: white;
+  width: 250px;
+  height: 150px;
+  margin: 0;
+  padding: 20px;
+}
+.user__container::after{
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 98%;
+  height: 94%;
+  background-image:linear-gradient( var(--shading));
+  z-index: -1;
+  filter: blur(10px);
+}
+.user__container p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+.email {
+  display: flex;
+  gap: 10px;
+}
+.button__container{
+  display: flex;
+  justify-content: flex-end;
+}
+.button__container button{
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #555555;
+  border: none;
+
+}
+.button__container button:nth-child(1){
+  background-color: #f44336;
+}
+button:hover{
+  transition: 0.8s;
+  scale: 1.2;
+  
+}
+@media screen and (max-width:300px) {
+  #root{
+    flex-direction: column;
+    align-items: center;
+  }
+  .users__container h1{
+    text-align: center;
+  }
+  .user__container{
+    width: 220px;
+  }
+  .user__container p {
+    font-size: 14px;
+  }
+  .email{
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
