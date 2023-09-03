@@ -48,6 +48,7 @@ form button {
 }
 .users__container h1{
   text-shadow: -8px 7px 6px #000000;
+  margin-bottom: 40px;
 }
 .container__cards{
   display: flex;
@@ -60,7 +61,7 @@ form button {
   background-color: white;
   width: 250px;
   height: 150px;
-  margin: 0;
+  margin: 0 auto;
   padding: 20px;
 }
 .user__container::after{
